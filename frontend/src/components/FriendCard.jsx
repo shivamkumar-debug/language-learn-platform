@@ -1,3 +1,4 @@
+// friend card ui component
 import { Link } from "react-router";
 import { LANGUAGE_TO_FLAG } from "../constants";
 
