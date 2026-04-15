@@ -1,4 +1,4 @@
-name: Simple CI
+name: Simple MERN CI
 
 on: [push]
 
@@ -13,5 +13,17 @@ jobs:
         with:
           node-version: 18
 
-      - run: npm install
-      - run: npm run build
+      - name: Install Backend
+        run: |
+          cd backend
+          npm install
+
+      - name: Install Frontend
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build Frontend
+        run: |
+          cd frontend
+          npm run build
