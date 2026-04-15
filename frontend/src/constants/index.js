@@ -190,6 +190,7 @@ export const LANGUAGE_TO_FLAG = {
   hindi: "in",
   russian: "ru",
   portuguese: "pt",
+  //a
   arabic: "sa",
   italian: "it",
   turkish: "tr",
