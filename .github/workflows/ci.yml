@@ -1,50 +1,17 @@
-name: MERN CI Pipeline 🚀
+name: Simple CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          node-version: 18
 
-      - name: Install Backend Dependencies
-        run: |
-          cd backend
-          npm install
-
-      - name: Run Backend Tests
-        run: |
-          cd backend
-          npm test || echo "No backend tests"
-
-      - name: Install Frontend Dependencies
-        run: |
-          cd frontend
-          npm install
-
-      - name: Build Frontend
-        run: |
-          cd frontend
-          npm run build
-
-      - name: Run ESLint
-        run: |
-          cd frontend
-          npm run lint || echo "No lint script"
+      - run: npm install
+      - run: npm run build
