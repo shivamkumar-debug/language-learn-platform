@@ -1,3 +1,4 @@
+// chat loading skelton
 import { LoaderIcon } from "lucide-react";
 
 function ChatLoader() {
