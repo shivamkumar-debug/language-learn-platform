@@ -1,3 +1,4 @@
+// integeration of chat system wirth stream api
 import { generateStreamToken } from "../lib/stream.js";
 
 export async function getStreamToken(req, res) {
