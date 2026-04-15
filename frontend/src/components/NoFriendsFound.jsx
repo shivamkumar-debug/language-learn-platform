@@ -10,3 +10,4 @@ const NoFriendsFound = () => {
 };
 
 export default NoFriendsFound;
+//f
