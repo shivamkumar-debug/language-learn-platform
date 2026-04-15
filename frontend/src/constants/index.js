@@ -1,3 +1,4 @@
+// theme json 
 export const THEMES = [
   {
     name: "light",

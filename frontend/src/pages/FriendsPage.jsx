@@ -1,3 +1,4 @@
+// friends page ui
 import { useQuery } from "@tanstack/react-query";
 import { getUserFriends } from "../lib/api";
 import { UsersIcon } from "lucide-react";

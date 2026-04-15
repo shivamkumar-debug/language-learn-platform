@@ -1,6 +1,6 @@
 import { LoaderIcon } from 'lucide-react'
 import React from 'react'
-
+// psgloader ui
 const PageLoader = () => {
   return (
     <div className='min-h-screen flex items-center justify-center'>
